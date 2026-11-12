@@ -1,0 +1,10 @@
+/* 
+    Utilizar esse como cod padrão das paginas como header e footer 
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
