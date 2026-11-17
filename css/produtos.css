@@ -1,0 +1,137 @@
+/* Estilo do site */
+
+   main {
+    margin: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Faixas de seção */
+.faixa {
+    font-family: var(--fontTitulo);
+    font-size: 32px;
+    padding: 8px 320px;
+    border-radius: 999px;
+    margin: 20px 0 40px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.faixa.principais {
+    background-color: var(--vermelho);
+    color: var(--azul);
+}
+
+.faixa.diversos {
+    background-color: var(--vermelho);
+    color: var(--azul);
+}
+
+/* Grid de cards */
+.secao-cards {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 5%;
+    border-radius: 70px;
+}
+
+.grid-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 30px;
+    justify-items: center;
+}
+
+.divisor {
+    width: 100%;
+    max-width: 800px;
+    border: none;
+    height: 1px;
+    background-color: rgba(249, 255, 247, 0.5);
+    margin: 60px 0 20px;
+}
+
+/* CARD */
+.card {
+    --background: linear-gradient(to right, var(--azul) 0%, var(--vermelho) 100%);
+    width: 100%;
+    max-width: 190px;
+    aspect-ratio: 190 / 254;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: var(--azul);
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    z-index: -1;
+}
+
+.card::before {
+    background: linear-gradient(to bottom right, var(--azul) 0%, var(--azul) 100%);
+    transform: rotate(2deg);
+}
+
+.card::after {
+    background: linear-gradient(to top right, var(--azul) 0%, var(--amareloSol) 100%);
+    transform: rotate(-2deg);
+}
+
+.card-info {
+    --color: #292b2c;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.card .title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.card:hover::before,
+.card:hover::after {
+    opacity: 0;
+}
+
+.card:hover .card-info {
+    color: var(--amareloSol);
+    transition: color 1s;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+    .grid-cards {
+        gap: 30px 16px;
+    }
+    .card .title {
+        font-size: 10px;
+    }
+    header h1 {
+        font-size: 40px;
+    }
+}
