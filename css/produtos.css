@@ -58,10 +58,10 @@
 
 /* CARD */
 .card {
-    --background: linear-gradient(to right, var(--azul) 0%, var(--vermelho) 100%);
+    --background: linear-gradient(var(--azul) 0%, var(--vermelho) 100%);
     width: 100%;
     max-width: 190px;
-    aspect-ratio: 190 / 254;
+    aspect-ratio: 1 / 1;
     padding: 5px;
     border-radius: 1rem;
     overflow: visible;
