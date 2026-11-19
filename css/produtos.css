@@ -1,6 +1,6 @@
 /* Estilo do site */
 
-   main {
+main {
     margin: 3vh;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@
 }
 
 .card-info {
-    --color: #292b2c;
+    --color: #999999;
     background: var(--color);
     color: var(--color);
     display: flex;
