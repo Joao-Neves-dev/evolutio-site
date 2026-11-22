@@ -76,3 +76,22 @@ section{
 .direita:hover{
     transform: scale(1.05) translateY(-20px) rotate(11deg);
 }
+
+#btn-link{
+    text-align: center;
+}
+
+#link{
+    padding: 35px 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #FFCC00;
+    font-size: 23px;
+}
+
+#link:hover{
+    background-color: #dbb20f;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .3s;
+}
