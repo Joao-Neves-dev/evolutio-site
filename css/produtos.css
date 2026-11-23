@@ -40,11 +40,12 @@ main {
 }
 
 .grid-cards {
-    width: 100%;
-    display: grid;
+     width:100%;
+    display:grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 45px 30px;
-    justify-items: center;
+    gap:45px 30px;
+    justify-items:center;
+
 }
 
 .divisor {
@@ -131,11 +132,58 @@ main {
 }
 
 /* Responsivo */
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
     .grid-cards {
         gap: 30px 16px;
     }
     header h1 {
         font-size: 40px;
+    }
+} */
+@media (max-width: 900px){
+
+    .faixa{
+        font-size:24px;
+        padding:8px 25px;
+    }
+
+    .grid-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width: 700px){
+
+    main{
+        margin:15px;
+    }
+
+    .secao-cards{
+        border-radius:30px;
+        padding:20px;
+    }
+
+    .grid-cards{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .faixa{
+        width:90%;
+        font-size:20px;
+        padding:10px;
+    }
+
+    .card{
+        max-width:250px;
+    }
+
+    .card .title{
+        font-size:12px;
+    }
+
+    header h1{
+        font-size:32px;
+        text-align:center;
     }
 }
