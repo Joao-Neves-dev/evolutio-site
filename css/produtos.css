@@ -59,6 +59,8 @@ main {
 /* CARD */
 .card {
     --background: linear-gradient(var(--azul) 0%, var(--vermelho) 100%);
+    display: block;
+    text-decoration: none;
     width: 100%;
     max-width: 190px;
     aspect-ratio: 1 / 1;
@@ -94,23 +96,28 @@ main {
 }
 
 .card-info {
-    --color: #999999;
-    background: var(--color);
-    color: var(--color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #999999;
     width: 100%;
     height: 100%;
-    overflow: visible;
+    overflow: hidden;
     border-radius: 10px;
     position: relative;
     z-index: 2;
 }
 
-.card .title {
-    font-weight: bold;
-    text-align: center;
+.card-info img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 1.5s ease;
+}
+
+.card-info .img-hover {
+    opacity: 0;
 }
 
 .card:hover::before,
@@ -118,18 +125,15 @@ main {
     opacity: 0;
 }
 
-.card:hover .card-info {
-    color: var(--amareloSol);
-    transition: color 1s;
+.card:hover .img-hover,
+.card:focus-visible .img-hover {
+    opacity: 1;
 }
 
 /* Responsivo */
 @media (max-width: 700px) {
     .grid-cards {
         gap: 30px 16px;
-    }
-    .card .title {
-        font-size: 10px;
     }
     header h1 {
         font-size: 40px;
