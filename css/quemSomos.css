@@ -1,3 +1,14 @@
+:root{
+    --brancoNeve: #f9fff7;
+    --amareloSol: #FFCC00;
+    --vermelho: #E63946;
+    --vermelhoEscuro: #bd303b;
+    --azul: #1D3557;
+    --azulClaro: #457B9D;
+    --fontTitulo: 'Luckiest Guy';
+    --fontPadrao: 'inter';
+}
+
 main {
     width: 90%;
     max-width: 1200px;
@@ -9,25 +20,68 @@ main {
     padding: 30px 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.texto {
-    width: 100%;
-    margin: 30px 10px;
-    position: relative;
+#historia h2{
+    margin: 0 0px 40px 0px;
+}
 
+h2{
+    font-size: 38px;
+    text-align: center;
+    background-color: var(--vermelho);
+    color: var(--brancoNeve);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.212);
+    margin: 40px 0px;
+    border-radius: 10px;
+}
+
+p{
+    text-indent: 20px;
+    font-size: 19px;
+    text-align: justify;
+}
+
+#slogan{
+    text-align: center;
+    text-indent: 0;
+}
+
+#valores{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
-
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.valor{
+    height: 250px;
+    width: 250px;
+    padding: 20px;
+    background-color: #FFCC00;
+    border-radius: 20px;
+    font-size: 20px; 
+    box-shadow: 12px 14px 19px -5px rgba(0, 0, 0, 0.603);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.azul{
+    background-color: var(--azulClaro);
+    color: white;
+}
+
+.vermelho{
+    background-color: var(--vermelho);
+    color: white;
+}
+
+.valor:hover{
+    transform: scale(1.08);
+    transition: .3s;
 }
 
 @media (max-width: 768px) {
@@ -37,23 +91,7 @@ main {
         padding: 20px;
     }
 
-    .texto {
-        flex-direction: column;
-        margin: 15px 0;
-    }
-
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
     h2 {
         font-size: 1.5rem;
-    }
-
-    p,
-    li {
-        font-size: 1rem;
-        line-height: 1.6;
     }
 }
