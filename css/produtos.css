@@ -18,13 +18,13 @@ main {
 }
 
 .faixa.principais {
-    background-color: var(--vermelho);
-    color: var(--azul);
+    background-color: var(--azul);
+    color: whitesmoke;
 }
 
 .faixa.diversos {
-    background-color: var(--vermelho);
-    color: var(--azul);
+    background-color: var(--azul);
+    color: whitesmoke;
 }
 
 /* Grid de cards */
@@ -114,7 +114,7 @@ main {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: opacity 1.5s ease;
+    transition: opacity 0.8s ease;
 }
 
 .card-info .img-hover {
